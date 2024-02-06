@@ -83,7 +83,7 @@ const App = () => {
           </div>
 
           <div className="flex justify-center items-center mt- ml-10">
-            <img src="public/images/illustration-sign-up-desktop.svg" className="hidden sm:flex md:mb-6 lg:mb-3" alt="" />
+            <img src="../public/images/illustration-sign-up-desktop.svg" className="hidden sm:flex md:mb-6 lg:mb-3" alt="" />
           </div>
 
         </div>
