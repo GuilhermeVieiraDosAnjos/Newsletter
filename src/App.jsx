@@ -24,17 +24,8 @@ const App = () => {
       }, 3000)
     }else{
       console.log('Valid email', email);
-      setEmail('');
       setSuccess(true)
     }
-
-    // if(validator.isEmail(email)){
-    //   return console.log('Valid email', email)
-    // }else{
-    //   setEmailError("Valid email is required")
-    // }
-
-    // if(email.length <= 0) return setEmailError('Please  enter your email')
   }
 
 
@@ -51,19 +42,22 @@ const App = () => {
 
 
   return (
-    <div className="flex justify-center items-center h-screen">
-      {success ? (<Success dismissMessage={dismissMessage} />) : (
-      <div className="bg-white h-5/6 w-4/6 rounded-2xl sm:flex  "> 
+    <div className="flex justify-center items-center h-screen bg-white sm:bg-darkSlate box-border ">
+      {success ? (<Success dismissMessage={dismissMessage} email={email} />) : (
 
-        <div className="grid grid-cols-2 ">
+      <div className="bg-white w-full h-full sm:h-full sm:w-full sm:flex md:3/6 md:2/6 md:m-5 lg:h-5/6 lg:w-4/6 flex-col-reverse rounded-2xl  "> 
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 ">
 
           <div className="flex flex-col m-8  ">
-            <h1 className="color-darkSlated text-7xl font- font-roboto">Stay Updated!</h1>
+            <img src="public/images/illustration-sign-up-mobile.svg"
+            className='mx-auto sm:hidden' alt="" />
+            <h1 className="color-darkSlated text-7xl font- font-roboto sm:text-4xl lg:text-6xl">Stay Updated!</h1>
             <p className='text-2xl mt-5'>
             Join 60,000+ product managers receiving monthly updates on:
             </p>
             <ul className='mt-9 text-lg flex flex-col'>
-              <li className='flex items-center my-3'>
+              <li className='flex items-center my-3 sm:flex sm:items-center'>
                 <IoIosCheckmarkCircle className='text-tomato' />
                 Product discovery and building what matters
               </li> 
@@ -88,8 +82,8 @@ const App = () => {
 
           </div>
 
-          <div className="flex justify-center items-center mt-3 ml-10">
-            <img src="public/images/illustration-sign-up-desktop.svg" className="sm: " alt="" />
+          <div className="flex justify-center items-center mt- ml-10">
+            <img src="public/images/illustration-sign-up-desktop.svg" className="hidden sm:flex md:mb-6 lg:mb-3" alt="" />
           </div>
 
         </div>
